@@ -2,10 +2,9 @@
 <html>
 
 <head>
-  <!-- Charlie Kirk Sucks -->
-  <title>Kirk Slider</title>
-  <meta name="description" content="A slider to change the size of Charlie Kirk's face from 10% to 120%">
-  <meta name="keywords" content="Charlie Kirk,Charlie Kirk Face,TPUSA,Toilet Paper USA,I Live Like a Capitalist Every Single Day">
+  <!-- Small Head hasSmol -->
+  <title>Hasan Slider</title>
+  <meta name="description" content="A slider to change the size of Hasan's head  from 10% to 120%">
   <script src="howler.min.js"></script>
   <style>
     .background{ 
@@ -17,7 +16,7 @@
     }
     #face {
       position: absolute;
-      top:167px;
+      top:150px;
       left:528px;
     }
     .controls {
@@ -34,6 +33,7 @@
     #sound {
       margin-right: 20px;
     }
+    p {text-align: center;}
   </style>
 </head>
 
@@ -41,7 +41,7 @@
   <div class="controls">
     <label for="sound">Sound</label>
     <input type="checkbox" id="sound" name="sound">
-    <input type="range" id="size" name="size" min="10" max="120" value="100">
+    <input type="range" id="size" name="size" min="70" max="200" value="110">
     <label id="percentage">100%</label>
   </div>
   <div class="background">
@@ -69,12 +69,15 @@
 
       clip.stop();
       if (sound.checked) {
-        clip.rate(1 / ((parseInt(slider.value) + 60) / 160));
+        clip.rate(1 / ((parseInt(slider.value) - 20) / 160));
         clip.play();
       }
     });
 
   </script>
 </body>
+
+<p>Fork of  <a href="https://github.com/blovish/kirkslider">blovish's kirkslider</a> but with <a href="https://twitch.tv/hasanabi">HasanAbi</a> assets</p>
+<p>@AuroR6S in chat hasBuff</p>
 
 </html>
